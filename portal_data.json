@@ -1,0 +1,42 @@
+{
+    "users": {
+        "admin": {
+            "password": "adminpassword",
+            "role": "Admin",
+            "name": "System Administrator",
+            "email": "admin@btech.edu"
+        },
+        "student1": {
+            "password": "studentpassword",
+            "role": "Student",
+            "name": "Alex Johnson",
+            "email": "alex@student.edu"
+        },
+        "rjay": {
+            "password": "Rjay@121274",
+            "role": "Student",
+            "name": "Jayaselvam Sadaiyandi",
+            "email": "jayaselvam411@gmail.com"
+        }
+    },
+    "student_scores": {
+        "student1": {
+            "Lab 1: Python Basics": {
+                "score": 100,
+                "total": 100
+            },
+            "Lab 2: Data Preprocessing": {
+                "score": 67,
+                "total": 100
+            }
+        },
+        "rjay": {}
+    },
+    "student_profiles": {
+        "student1": {
+            "register_no": "2026BTML001",
+            "department": "Computer Science & Engineering",
+            "year": "3rd Year"
+        }
+    }
+}
