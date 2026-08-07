@@ -305,6 +305,18 @@ DEFAULT_QUESTIONS = {
         "expected_outputs": ["43.0"],
         "starter_code": "actual = list(map(int, input().split()))\npredicted = list(map(int, input().split()))\n# Compute MSE\n",
     },
+    "Q36. Complete Machine Learning Workflow (Linear Regression)": {
+        "topic": "Bonus ML-Oriented",
+        "points": 50,
+        "description": "Read the number of training samples N. The next N lines contain two integers: House_Size and House_Price. Read one test house size. Train a simple Linear Regression model using the training data, predict the price for the given test house, and print the predicted price (rounded to 2 decimal places) followed by the Mean Squared Error (MSE) of the model on the training data.",
+        "inputs": [
+            "5\n1000 200000\n1200 240000\n1500 300000\n1800 360000\n2000 400000\n1600"
+        ],
+        "expected_outputs": [
+            "Predicted Price: 320000.00\nMSE: 0.00"
+        ],
+        "starter_code": "from sklearn.linear_model import LinearRegression\nfrom sklearn.metrics import mean_squared_error\n\nn = int(input())\nX = []\ny = []\n\nfor _ in range(n):\n    size, price = map(int, input().split())\n    X.append([size])\n    y.append(price)\n\n# Read test house size\ntest_size = int(input())\n\n# Train the model\n\n# Predict the price\n\n# Predict on training data\n\n# Calculate MSE\n\n# Print predicted price and MSE\n"
+},
 }
 
 QUIZ_QUESTIONS = [
@@ -337,7 +349,127 @@ QUIZ_QUESTIONS = [
         "options": ["^", "**", "//", "%"],
         "answer": "**",
         "explanation": "** is used for raising a number to a power (e.g., 2**3 = 8)."
-    }
+    },
+  {
+    "question": "Which Python library is mainly used for numerical computations?",
+    "options": ["NumPy", "Flask", "Tkinter", "Requests"],
+    "answer": "NumPy",
+    "explanation": "NumPy provides fast array operations and mathematical functions for numerical computing."
+  },
+  {
+    "question": "Which function is used to display output in Python?",
+    "options": ["display()", "echo()", "print()", "show()"],
+    "answer": "print()",
+    "explanation": "The print() function displays output on the console."
+  },
+  {
+    "question": "Which data structure stores key-value pairs in Python?",
+    "options": ["List", "Tuple", "Dictionary", "Set"],
+    "answer": "Dictionary",
+    "explanation": "A dictionary stores data as key-value pairs."
+  },
+  {
+    "question": "Which keyword is used to define a function in Python?",
+    "options": ["func", "define", "def", "function"],
+    "answer": "def",
+    "explanation": "The 'def' keyword is used to create a function in Python."
+  },
+  {
+    "question": "Which machine learning algorithm is commonly used for classification?",
+    "options": ["Linear Regression", "Logistic Regression", "K-Means", "PCA"],
+    "answer": "Logistic Regression",
+    "explanation": "Logistic Regression is used to classify data into categories."
+  },
+  {
+    "question": "What is the output of `5 // 2` in Python?",
+    "options": ["2", "2.5", "3", "1"],
+    "answer": "2",
+    "explanation": "The // operator performs floor division and returns the integer quotient."
+  },
+  {
+    "question": "Which library is commonly used for creating visualizations in Python?",
+    "options": ["NumPy", "Pandas", "Matplotlib", "TensorFlow"],
+    "answer": "Matplotlib",
+    "explanation": "Matplotlib is widely used for plotting graphs and charts."
+  },
+  {
+    "question": "Which of the following is a supervised learning algorithm?",
+    "options": ["K-Means", "DBSCAN", "Linear Regression", "Apriori"],
+    "answer": "Linear Regression",
+    "explanation": "Linear Regression is a supervised learning algorithm used for prediction."
+  },
+  {
+    "question": "Which function converts a string to an integer?",
+    "options": ["str()", "float()", "int()", "bool()"],
+    "answer": "int()",
+    "explanation": "The int() function converts compatible values into integers."
+  },
+  {
+    "question": "What is the correct extension for Python files?",
+    "options": [".java", ".py", ".cpp", ".exe"],
+    "answer": ".py",
+    "explanation": "Python source code files use the .py extension."
+  },
+  {
+    "question": "Which metric is commonly used to evaluate classification models?",
+    "options": ["Accuracy", "Mean Absolute Error", "RMSE", "R-Squared"],
+    "answer": "Accuracy",
+    "explanation": "Accuracy measures the percentage of correct predictions."
+  },
+  {
+    "question": "Which keyword is used for conditional statements in Python?",
+    "options": ["switch", "if", "case", "loop"],
+    "answer": "if",
+    "explanation": "The 'if' keyword is used to make decisions based on conditions."
+  },
+  {
+    "question": "Which function is used to read a CSV file using Pandas?",
+    "options": ["pd.load_csv()", "pd.read_csv()", "pd.open_csv()", "pd.import_csv()"],
+    "answer": "pd.read_csv()",
+    "explanation": "pd.read_csv() reads data from CSV files into a DataFrame."
+  },
+  {
+    "question": "What is the output of `type(3.14)`?",
+    "options": ["int", "float", "str", "bool"],
+    "answer": "float",
+    "explanation": "3.14 is a floating-point number, so its type is float."
+  },
+  {
+    "question": "Which algorithm is commonly used for clustering?",
+    "options": ["Decision Tree", "K-Means", "Linear Regression", "Naive Bayes"],
+    "answer": "K-Means",
+    "explanation": "K-Means is one of the most popular clustering algorithms."
+  },
+  {
+    "question": "Which symbol is used to write comments in Python?",
+    "options": ["//", "#", "/*", "--"],
+    "answer": "#",
+    "explanation": "Single-line comments in Python begin with the # symbol."
+  },
+  {
+    "question": "Which function returns the largest value in a list?",
+    "options": ["largest()", "high()", "max()", "top()"],
+    "answer": "max()",
+    "explanation": "The max() function returns the maximum value from an iterable."
+  },
+  {
+    "question": "Which library is widely used for building deep learning models?",
+    "options": ["TensorFlow", "BeautifulSoup", "OpenCV", "PyGame"],
+    "answer": "TensorFlow",
+    "explanation": "TensorFlow is a popular framework for deep learning and neural networks."
+  },
+  {
+    "question": "What is the output of `bool(0)`?",
+    "options": ["True", "False", "0", "None"],
+    "answer": "False",
+    "explanation": "In Python, the integer value 0 evaluates to False."
+  },
+  {
+    "question": "Which evaluation metric is commonly used for clustering?",
+    "options": ["Silhouette Score", "Accuracy", "Precision", "Recall"],
+    "answer": "Silhouette Score",
+    "explanation": "The Silhouette Score measures how well data points fit within their assigned clusters."
+  }
 ]
 
 DEFAULT_USERS = {
