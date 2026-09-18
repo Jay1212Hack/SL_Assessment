@@ -1328,8 +1328,11 @@ def render_login_screen():
                     matched_username = next(
                         (
                             stored_username
-                            for stored_username in st.session_state.users
-                            if stored_username.casefold() == username.casefold()
+                            for stored_username, user_data in st.session_state.users.items()
+                            if (
+                                stored_username.casefold() == username.casefold()
+                                or user_data.get("student_id", "").strip().casefold() == username.casefold()
+                            )
                         ),
                         None,
                     )
