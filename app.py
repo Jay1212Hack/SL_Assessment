@@ -1122,7 +1122,10 @@ def render_leaderboard_view(unit_name="All Units"):
     # TOP 3 ANIMATED PODIUM
     st.markdown("### 🥇 Top Performers Podium")
     p_col1, p_col2, p_col3 = st.columns(3)
-    top_3 = df_lb.head(3)
+    top_3 = df_lb.sort_values(
+        by=["Completion Time", "Total Points"],
+        ascending=[True, False],
+    ).head(3)
     
     with p_col1:
         if len(top_3) >= 1:
